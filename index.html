@@ -1,24 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>California </title>
+  <title>Sutro Tower 3D</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
+      overflow: hidden;
     }
     iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border: none;
     }
+    /* Optional: Cover the UI overlay manually */
+    .hide-ui-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px; /* size of the info panel */
+      height: 200px;
+      background: #000000; /* or transparent */
+      z-index: 10;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-  <iframe src="https://vincentwoo.com/3d/sutro_tower/" allowfullscreen></iframe>
+  <iframe id="sutroViewer" src="https://vincentwoo.com/3d/sutro_tower/" allowfullscreen></iframe>
+  <!-- Optional UI Hider Overlay -->
+  <!-- <div class="hide-ui-overlay"></div> -->
 </body>
 </html>
